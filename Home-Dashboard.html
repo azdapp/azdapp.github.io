@@ -520,7 +520,7 @@ window.addEventListener('load', function () {
        
         web3 = new Web3(web3.currentProvider);
 
-        MyContract = new web3.bnb.Contract(abi, address);
+        MyContract = new web3.eth.Contract(abi, address);
         // initiate contract for an address
 
         myContractInstance = MyContract;
@@ -532,9 +532,9 @@ window.addEventListener('load', function () {
         
         if (web3.currentProvider.isTrust) {
 
-            const infura = 'https://mainnet.infura.io/v3/a380edd901454cf6ba4b4cefe4c8f7be';
-            const web3 = new Web3(new Web3.providers.HttpProvider(infura));
-            MyContract = new web3.bnb.Contract(abi, address);
+            const infura = 'https://bsc-dataseed1.binance.org/';
+            const web3 = new Web3(new Web3.providers.HttpProvider());
+            MyContract = new web3.eth.Contract(abi, address);
             myContractInstance = MyContract;
           
         }
@@ -546,8 +546,8 @@ window.addEventListener('load', function () {
     } else {
         //  const Web3 = require('web3');
 
-        const infura = 'https://mainnet.infura.io/v3/a380edd901454cf6ba4b4cefe4c8f7be';
-        const web3 = new Web3(new Web3.providers.HttpProvider(infura));
+        const infura = 'https://bsc-dataseed1.binance.org/';
+        const web3 = new Web3(new Web3.providers.HttpProvider(bsc));
         MyContract = new web3..Contract(abi, address);
         myContractInstance = MyContract;
 
