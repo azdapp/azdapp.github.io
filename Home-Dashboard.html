@@ -273,7 +273,7 @@ function getReferralCommission() {
                 }
                 else {
 
-                    referraltotal = parseFloat(referraltotal) + parseFloat("0.0025");
+                    referraltotal = parseFloat(referraltotal) + parseFloat("0.00025");
 
                 }
 
@@ -471,7 +471,7 @@ function InDirectreferralCount(address, level) {
 function Transaction_Register() {
     
     var events = myContractInstance.getPastEvents('getMoneyForLevelEvent', {filter:{ _user: account },  'fromBlock': 0, 'toBlock': 'latest'}, function (error, log) {
-        var level1 = parseFloat(0.01); var level2 = parseFloat(0.005); var level3 = parseFloat(0.0025); var level4 = parseFloat(0.0025);
+        var level1 = parseFloat(0.01); var level2 = parseFloat(0.005); var level3 = parseFloat(0.0025); var level4 = parseFloat(0.00025);
 
         if (!error) {
             $.each(log, function (key, value) {
@@ -546,10 +546,10 @@ window.addEventListener('load', function () {
     } else {
         //  const Web3 = require('web3');
 
-        const bsc = 'https://bscscan.com/';
-        const web3 = new Web3(new Web3.providers.HttpProvider(bsc));
-        MyContract = new web3..Contract(abi, address);
-        myContractInstance = MyContract;
+        const infura = 'https://mainnet.infura.io/v3/a380edd901454cf6ba4b4cefe4c8f7be';
+            const web3 = new Web3(new Web3.providers.HttpProvider(infura));
+            MyContract = new web3.eth.Contract(abi, address);
+            myContractInstance = MyContract;
 
            getVariableData();
 
