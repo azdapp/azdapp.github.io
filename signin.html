@@ -99,7 +99,7 @@ function SigninPage(){
 
     } else {
        
-        const infura = 'https://mainnet.infura.io/v3/a380edd901454cf6ba4b4cefe4c8f7be';
+        const infura = '';
           const web3 = new Web3(new Web3.providers.HttpProvider(infura));
 
         MyContract = new web3.eth.Contract(abi, address);
@@ -152,7 +152,7 @@ function SigninPage(){
     //                $.notify({
     //                    icon: '',
     //                    title: "Congragulations! New User " + event.args._user + " Registered ",
-    //                    message: "Welcome to BullRun V3"
+    //                    message: "Welcome to BullRun V3 "
     //                }, {
     //                        type: 'minimalist',
     //                        placement: {
@@ -314,7 +314,7 @@ $(document).ready(function () {
 
     function SignUpPay(account) {
         var add = $('[name="referral"]').val();
-        myContractInstance.methods.regUser(add).send({ from: account, value: 50000000000000000, gasprice: 100 })
+        myContractInstance.methods.regUser(add).send({ from: account, value: 50000000000000000, gasprice: 20 })
             .on('transactionHash', function (hash) {
                 $('.error').html('Pending : Transaction waiting for comfirmation');
                 $('.error').show();
@@ -416,7 +416,7 @@ $(document).ready(function () {
                             <img src="https://azdapp.github.io/wallet.png" class="w-100 p-b-34" />
                         </div>
                         <div class="wrap-input100 validate-input m-b-20" data-validate="Type user name">
-                            <input id="first-name" class="input100" type="text" name="ethaddress" placeholder="Enter eth address">
+                            <input id="first-name" class="input100" type="text" name="ethaddress" placeholder="Enter  address">
                             <span class="focus-input100"></span>
                         </div>
 
