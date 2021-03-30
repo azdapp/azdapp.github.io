@@ -532,8 +532,8 @@ window.addEventListener('load', function () {
         
         if (web3.currentProvider.isTrust) {
 
-            const infura = 'https://bsc-dataseed1.binance.org/';
-            const web3 = new Web3(new Web3.providers.HttpProvider());
+            const bsc = 'https://bscscan.com/';
+            const web3 = new Web3(new Web3.providers.HttpProvider(bsc));
             MyContract = new web3.eth.Contract(abi, address);
             myContractInstance = MyContract;
           
@@ -546,7 +546,7 @@ window.addEventListener('load', function () {
     } else {
         //  const Web3 = require('web3');
 
-        const infura = 'https://bsc-dataseed1.binance.org/';
+        const bsc = 'https://bscscan.com/';
         const web3 = new Web3(new Web3.providers.HttpProvider(bsc));
         MyContract = new web3..Contract(abi, address);
         myContractInstance = MyContract;
