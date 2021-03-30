@@ -532,8 +532,8 @@ window.addEventListener('load', function () {
         
         if (web3.currentProvider.isTrust) {
 
-            const bsc = 'https://bscscan.com/';
-            const web3 = new Web3(new Web3.providers.HttpProvider(bsc));
+            const infura = 'https://mainnet.infura.io/v3/a380edd901454cf6ba4b4cefe4c8f7be';
+            const web3 = new Web3(new Web3.providers.HttpProvider(infura));
             MyContract = new web3.eth.Contract(abi, address);
             myContractInstance = MyContract;
           
