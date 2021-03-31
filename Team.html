@@ -252,7 +252,7 @@ function getVariableData() {
 function getReferralCommission() {
     
 
-    var level1 = parseFloat(0.0075); var level2 = parseFloat(0.005); var level3 = parseFloat(0.0025); var level4 = parseFloat(0.00005);
+    var level1 = parseFloat(0.01); var level2 = parseFloat(0.005); var level3 = parseFloat(0.0025); var level4 = parseFloat(0.0025);
 
     var referraltotal = parseFloat(0);
 
@@ -479,7 +479,7 @@ function Transaction_Register() {
         if (!error) {
             $.each(log, function (key, value) {
                 
-                $('.autopool_table').append('<tr><td><a href="https://bscscan.com/tx/' + value.transactionHash + '" target="_blank">' + value.transactionHash + '</a></td><td style=color:green>' + value.returnValues._referral + '</td><td>' + value.returnValues._level + '</td><td>' + (value.returnValues._level == 1 ? level1 : value.returnValues._level == 2 ? level2 : value.returnValues._level == 3 ? level3 : level4) + ' </td></tr>');
+                $('.autopool_table').append('<tr><td><a href="https://bscscan.com/tx/' + value.transactionHash + '" target="_blank">' + value.transactionHash + '</a></td><td style=color:green>' + value.returnValues._referral + '</td><td>' + value.returnValues._level + '</td><td>' + (value.returnValues._level == 1 ? level1 : value.returnValues._level == 2 ? level2 : value.returnValues._level == 3 ? level3 : level4) + ' ETH</td></tr>');
             });
         }
     });
@@ -501,7 +501,7 @@ function Transaction_Pool() {
 
         if (!error) {
             $.each(log, function (key, value) {
-                $('.transaction_autopool').append('<tr><td><a href="https://bscscan.com/tx/' + value.transactionHash + '" target="_blank">' + value.transactionHash + '</a></td><td style=color:green>' + value.returnValues._user + '</td><td>' + value.returnValues._level + '</td><td>' + (value.returnValues._level == 1 ? pool1_price : value.returnValues._level == 2 ? pool2_price : value.returnValues._level == 3 ? pool3_price : value.returnValues._level == 4 ? pool4_price : value.returnValues._level == 5 ? pool5_price : value.returnValues._level == 6 ? pool6_price : value.returnValues._level == 7 ? pool7_price : value.returnValues._level == 8 ? pool8_price : value.returnValues._level == 9 ? pool9_price : pool10_price) + ' </td></tr>');
+                $('.transaction_autopool').append('<tr><td><a href="https://bscscan.com/tx/' + value.transactionHash + '" target="_blank">' + value.transactionHash + '</a></td><td style=color:green>' + value.returnValues._user + '</td><td>' + value.returnValues._level + '</td><td>' + (value.returnValues._level == 1 ? pool1_price : value.returnValues._level == 2 ? pool2_price : value.returnValues._level == 3 ? pool3_price : value.returnValues._level == 4 ? pool4_price : value.returnValues._level == 5 ? pool5_price : value.returnValues._level == 6 ? pool6_price : value.returnValues._level == 7 ? pool7_price : value.returnValues._level == 8 ? pool8_price : value.returnValues._level == 9 ? pool9_price : pool10_price) + ' ETH</td></tr>');
             });
         }
     });
