@@ -208,22 +208,22 @@ function getVariableData() {
 
     myContractInstance.methods.users(account).call().then(function (result1) {
         
-            $('.currentuseridlink').html("https://azdapp.github.io/signup/?referralid=" + result1.id);
+            $('.currentuseridlink').html("https://azdapp.github.io/signup?referralid=" + result1.id);
 
-            $('.currentuseridlinknew').html("https://link.trustwallet.com/open_url?coin_id=60&url=https://azdapp.github.io/signup/?referralid=" + result1.id);
+            $('.currentuseridlinknew').html("https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202");
 
 
 
             $('.currentuseridlink').val("https://azdapp.github.io/signup/?referralid=" + result1.id);
 
-            $('.currentuseridlinknew').val("https://link.trustwallet.com/open_url?coin_id=60&url=https://azdapp.github.io/signup/?referralid=" + result1.id);
+            $('.currentuseridlinknew').val("https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn");
 
 
 
-            $('.sharebutton').attr('data-url', "https://azdapp.github.io/signup/?referralid=" + result1.id);
+            $('.sharebutton').attr('data-url', "https://azdapp.github.io/signup?referralid=" + result1.id);
             $('.currentuserid').html(result1.id);
             $('.currentaddress').html(account);
-            $('.ethaddress').attr('href', 'https://bscscan.com/address/' + account);
+            $('.address').attr('href', 'https://bscscan.com/address/' + account);
         
     });
 
@@ -528,7 +528,7 @@ window.addEventListener('load', function () {
 
         if (web3.currentProvider.isTrust) {
 
-            const infura = 'https://mainnet.infura.io/v3/a380edd901454cf6ba4b4cefe4c8f7be';
+            const infura = '';
             const web3 = new Web3(new Web3.providers.HttpProvider(infura));
             MyContract = new web3.eth.Contract(abi, address);
             myContractInstance = MyContract;
@@ -540,7 +540,7 @@ window.addEventListener('load', function () {
     } else {
        // const Web3 = require('web3');
 
-        const infura = 'https://mainnet.infura.io/v3/a380edd901454cf6ba4b4cefe4c8f7be';
+        const infura = '';
         const web3 = new Web3(new Web3.providers.HttpProvider(infura));
         MyContract = new web3.eth.Contract(abi, address);
         myContractInstance = MyContract;
