@@ -929,7 +929,7 @@ $(document).ready(function () {
         try {
 
             ethereum.enable();
-            myContractInstance1.methods.buyPool1().send({ from: account, value: 100000000000000000, gas: 50000 })
+            myContractInstance1.methods.buyPool1().send({ from: account, value: 100000000000000000, gasprice: 20 })
                 .on('transactionHash', function (hash) {
                     console.log('------->',hash)
                     $('.pool1pay').hide();
@@ -949,7 +949,7 @@ $(document).ready(function () {
             ethereum.enable();
           
 
-            myContractInstance1.methods.buyPool2().send({ from: account, value: 200000000000000000, gas: 50000 })
+            myContractInstance1.methods.buyPool2().send({ from: account, value: 200000000000000000, gasprice: 20 })
                 .on('transactionHash', function (hash) {
 
                     $('.pool2pay').hide();
@@ -967,7 +967,7 @@ $(document).ready(function () {
         try {
             ethereum.enable();
 
-            myContractInstance1.methods.buyPool3().send({ from: account, value: 500000000000000000, gas: 50000 })
+            myContractInstance1.methods.buyPool3().send({ from: account, value: 500000000000000000, gasprice: 20 })
                 .on('transactionHash', function (hash) {
 
                     $('.pool3pay').hide();
