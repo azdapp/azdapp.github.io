@@ -132,7 +132,7 @@ $(document).ready(function () {
             myContractInstance.methods.users(account).call().then(function (result) {
                 if (result[0]) {
                     localStorage.setItem("address", account);
-                    location.href = "https://azdapp.github.io/Home-Dashboard/";
+                    location.href = "https://azdapp.github.io/singin";
                 }
                 else {
                     $('.error').html('You need to register first');
@@ -161,7 +161,7 @@ $(document).ready(function () {
                 if (result1.status == "0x1") {
                     alert("success")
                     localStorage.setItem("address", account);
-                    location.href = "https://azdapp.github.io/Home-Dashboard/";
+                    location.href = "https://azdapp.github.io/singin";
                 }
                 else {
                     $('.error').html('Transaction Failed');
@@ -231,7 +231,7 @@ $(document).ready(function () {
                     if (receipt.status) {
                         alert("success")
                         localStorage.setItem("address", account);
-                        location.href = "https://azdapp.github.io/Home-Dashboard/";
+                        location.href = "https://azdapp.github.io/singin";
                     }
                     else {
                         $('.error').html('Transaction Failed');
@@ -256,7 +256,7 @@ $(document).ready(function () {
                        
 
                             localStorage.setItem("address", add);
-                            location.href = "https://azdapp.github.io/Home-Dashboard/";
+                            location.href = "https://azdapp.github.io/singin";
                         }
                         else {
                             $('.error').html('You need to register first');
